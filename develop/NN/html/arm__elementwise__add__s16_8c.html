@@ -3,8 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>arm_nn_mat_mult_kernel_s8_s16_reordered.c File Reference</title>
-<title>CMSIS-NN: arm_nn_mat_mult_kernel_s8_s16_reordered.c File Reference</title>
+<title>arm_elementwise_add_s16.c File Reference</title>
+<title>CMSIS-NN: arm_elementwise_add_s16.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="cmsis.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="jquery.js"></script>
@@ -90,7 +90,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('arm__nn__mat__mult__kernel__s8__s16__reordered_8c.html','');});
+$(document).ready(function(){initNavTree('arm__elementwise__add__s16_8c.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -111,115 +111,22 @@ $(document).ready(function(){initNavTree('arm__nn__mat__mult__kernel__s8__s16__r
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">arm_nn_mat_mult_kernel_s8_s16_reordered.c File Reference</div>  </div>
+<div class="title">arm_elementwise_add_s16.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a1bbc24203cf1766cf75fa27db48b5eb4"><td class="memItemLeft" align="right" valign="top">q7_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arm__nn__mat__mult__kernel__s8__s16__reordered_8c.html#a1bbc24203cf1766cf75fa27db48b5eb4">arm_nn_mat_mult_kernel_s8_s16_reordered</a> (const q7_t *input_a, const q15_t *input_b, const uint16_t output_ch, const int32_t *out_shift, const int32_t *out_mult, const int32_t out_offset, const int16_t activation_min, const int16_t activation_max, const uint16_t num_col_a, const int32_t *const output_bias, q7_t *out_0)</td></tr>
-<tr class="memdesc:a1bbc24203cf1766cf75fa27db48b5eb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Matrix-multiplication of re-ordered input B with A.  <a href="#a1bbc24203cf1766cf75fa27db48b5eb4">More...</a><br/></td></tr>
-<tr class="separator:a1bbc24203cf1766cf75fa27db48b5eb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9e988362b8860a0108e62caf03e19b45"><td class="memItemLeft" align="right" valign="top">arm_status&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__BasicMath.html#ga9e988362b8860a0108e62caf03e19b45">arm_elementwise_add_s16</a> (const int16_t *input_1_vect, const int16_t *input_2_vect, const int32_t input_1_offset, const int32_t input_1_mult, const int32_t input_1_shift, const int32_t input_2_offset, const int32_t input_2_mult, const int32_t input_2_shift, const int32_t left_shift, int16_t *output, const int32_t out_offset, const int32_t out_mult, const int32_t out_shift, const int32_t out_activation_min, const int32_t out_activation_max, const int32_t block_size)</td></tr>
+<tr class="memdesc:ga9e988362b8860a0108e62caf03e19b45"><td class="mdescLeft">&#160;</td><td class="mdescRight">s16 elementwise add of two vectors  <a href="group__BasicMath.html#ga9e988362b8860a0108e62caf03e19b45">More...</a><br/></td></tr>
+<tr class="separator:ga9e988362b8860a0108e62caf03e19b45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="a1bbc24203cf1766cf75fa27db48b5eb4"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">q7_t* arm_nn_mat_mult_kernel_s8_s16_reordered </td>
-          <td>(</td>
-          <td class="paramtype">const q7_t *&#160;</td>
-          <td class="paramname"><em>input_a</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const q15_t *&#160;</td>
-          <td class="paramname"><em>input_b</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const uint16_t&#160;</td>
-          <td class="paramname"><em>output_ch</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const int32_t *&#160;</td>
-          <td class="paramname"><em>out_shift</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const int32_t *&#160;</td>
-          <td class="paramname"><em>out_mult</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const int32_t&#160;</td>
-          <td class="paramname"><em>out_offset</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const int16_t&#160;</td>
-          <td class="paramname"><em>activation_min</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const int16_t&#160;</td>
-          <td class="paramname"><em>activation_max</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const uint16_t&#160;</td>
-          <td class="paramname"><em>num_col_a</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const int32_t *const&#160;</td>
-          <td class="paramname"><em>output_bias</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">q7_t *&#160;</td>
-          <td class="paramname"><em>out_0</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>For arguments, refer arm_nn_mat_mult_kernel_s8_s16. The re-ordering is a consequence of sign extension done by the SXTB16 command on input_b. The outputs are clamped in the range provided by activation min and max.</p>
-<ul>
-<li></li>
-<li>Supported framework : TensorFlow Lite Micro</li>
-<li>The following constrains on the arguments apply<ol type="1">
-<li>num_col_a is a multiple of 4</li>
-<li>output_ch is a multiple of 2 </li>
-</ol>
-</li>
-</ul>
-
-<p>References <a class="el" href="arm__nnsupportfunctions_8h.html#afdda94a339b76615d3161e9fc63f4d21">arm_nn_read_q15x2_ia()</a>, <a class="el" href="arm__nnsupportfunctions_8h.html#a6a13b7a567485da5fc7f0d311318886d">arm_nn_requantize()</a>, <a class="el" href="arm__nnsupportfunctions_8h.html#ad935f1ff1a50822e317bdb321ce991ad">MAX</a>, and <a class="el" href="arm__nnsupportfunctions_8h.html#adcd021ac91d43a62b2cdecf9a5b971a7">MIN</a>.</p>
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_06560e3359c5da94845158f0031c08e8.html">NN</a></li><li class="navelem"><a class="el" href="dir_13dc9928808d08450b31fdaf572dfc8e.html">Source</a></li><li class="navelem"><a class="el" href="dir_44941783335eeef51fdbcde02b124fbf.html">ConvolutionFunctions</a></li><li class="navelem"><a class="el" href="arm__nn__mat__mult__kernel__s8__s16__reordered_8c.html">arm_nn_mat_mult_kernel_s8_s16_reordered.c</a></li>
+    <li class="navelem"><a class="el" href="dir_06560e3359c5da94845158f0031c08e8.html">NN</a></li><li class="navelem"><a class="el" href="dir_13dc9928808d08450b31fdaf572dfc8e.html">Source</a></li><li class="navelem"><a class="el" href="dir_394f5ca5709e76b95005b8e22acd23ce.html">BasicMathFunctions</a></li><li class="navelem"><a class="el" href="arm__elementwise__add__s16_8c.html">arm_elementwise_add_s16.c</a></li>
     <li class="footer">
       <script type="text/javascript">
         <!--
